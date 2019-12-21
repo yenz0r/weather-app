@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Start Screen View-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="StartScreenView" id="BYZ-38-t0r" customClass="StartScreenView" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Input the city for search:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bHa-mi-d5K">
+                                <rect key="frame" x="20" y="89" width="309" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="city name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="86P-Wr-jTL">
+                                <rect key="frame" x="61" y="168" width="292" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="Vco-ho-wCT"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Or choose one of the list:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eUW-K9-8A8">
+                                <rect key="frame" x="20" y="283" width="320" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VgO-kQ-lE8">
+                                <rect key="frame" x="0.0" y="602" width="414" height="260"/>
+                                <color key="backgroundColor" systemColor="systemPurpleColor" red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="33"/>
+                                <state key="normal" title="Start">
+                                    <color key="titleColor" systemColor="systemGroupedBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="startButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mvx-WD-hXO"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your city: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WP6-Jc-ThY">
+                                <rect key="frame" x="20" y="537" width="126" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wsP-T4-0PL">
+                                <rect key="frame" x="0.0" y="367" width="414" height="162"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="162" id="cIz-sw-0fb"/>
+                                </constraints>
+                            </pickerView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="wsP-T4-0PL" firstAttribute="top" secondItem="eUW-K9-8A8" secondAttribute="bottom" constant="48" id="27n-j4-V0n"/>
+                            <constraint firstItem="wsP-T4-0PL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="2IT-n8-rM9"/>
+                            <constraint firstItem="bHa-mi-d5K" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="5YT-Ar-yD6"/>
+                            <constraint firstItem="WP6-Jc-ThY" firstAttribute="top" secondItem="wsP-T4-0PL" secondAttribute="bottom" constant="8" id="Ag7-yp-CX1"/>
+                            <constraint firstItem="86P-Wr-jTL" firstAttribute="top" secondItem="bHa-mi-d5K" secondAttribute="bottom" constant="43" id="Bl0-wa-faN"/>
+                            <constraint firstItem="WP6-Jc-ThY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="E1N-QJ-h8m"/>
+                            <constraint firstItem="VgO-kQ-lE8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ODk-Vf-Pkh"/>
+                            <constraint firstItem="bHa-mi-d5K" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="45" id="TCj-So-urM"/>
+                            <constraint firstItem="86P-Wr-jTL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="61" id="Vzx-Zr-vGb"/>
+                            <constraint firstItem="eUW-K9-8A8" firstAttribute="top" secondItem="86P-Wr-jTL" secondAttribute="bottom" constant="81" id="XqP-uT-hv8"/>
+                            <constraint firstItem="eUW-K9-8A8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Ya0-Jj-nbd"/>
+                            <constraint firstItem="VgO-kQ-lE8" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="ebN-un-qC7"/>
+                            <constraint firstItem="VgO-kQ-lE8" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="g0F-64-7k9"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="86P-Wr-jTL" secondAttribute="trailing" constant="61" id="i5I-GQ-eGu"/>
+                            <constraint firstItem="VgO-kQ-lE8" firstAttribute="top" secondItem="WP6-Jc-ThY" secondAttribute="bottom" constant="29" id="xOu-1t-XyR"/>
+                            <constraint firstItem="wsP-T4-0PL" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="xgg-Hr-8Wx"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="cityNamePickerView" destination="wsP-T4-0PL" id="sA2-hz-GjL"/>
+                        <outlet property="cityNameTextFiled" destination="86P-Wr-jTL" id="Q8k-Cg-QU0"/>
+                        <outlet property="yourCityLabel" destination="WP6-Jc-ThY" id="Ebn-ge-U2n"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="103.79464285714285"/>
+        </scene>
+    </scenes>
+</document>
