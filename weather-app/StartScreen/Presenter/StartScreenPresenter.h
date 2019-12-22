@@ -14,7 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @class StartScreenView;
 
-@interface StartScreenPresenterImpl : NSObject
+@interface StartScreenPresenter : NSObject
 
 @property (strong, nonatomic) NSMutableArray<NSString*>* citiesNames;
 @property (strong, nonatomic) NSString* selectedCity;

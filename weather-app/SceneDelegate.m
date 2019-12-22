@@ -1,5 +1,6 @@
 #import "SceneDelegate.h"
 #import "StartScreenView.h"
+#import "StartScreenBuilder.h"
 
 @interface SceneDelegate ()
 
@@ -12,9 +13,9 @@
 
     self.window = [[UIWindow alloc] initWithWindowScene:(UIWindowScene*)scene];
 
-    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-    StartScreenView *startScreenView = [storyboard instantiateViewControllerWithIdentifier:@"StartScreenView"];
-    UINavigationController* navigation = [[UINavigationController alloc] initWithRootViewController:startScreenView];
+    StartScreenView* startView = [[[StartScreenBuilder alloc] init] build];
+
+    UINavigationController* navigation = [[UINavigationController alloc] initWithRootViewController:startView];
     self.window.rootViewController = navigation;
 
     [self.window makeKeyAndVisible];

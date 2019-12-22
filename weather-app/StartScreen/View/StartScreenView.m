@@ -10,19 +10,12 @@
 
 @interface StartScreenView ()
 
-
 @end
 
 @implementation StartScreenView
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
-    StartScreenModel *model = [[StartScreenModel alloc] initWithCitiesCount:7];
-    StartScreenPresenterImpl *presenter = [[StartScreenPresenterImpl alloc] initWithModel:model forView:self];
-
-    self.presenter = presenter;
-
     [self.cityNamePickerView setDelegate:self];
 
     [self.cityNameTextField addTarget:self action:@selector(handleTextUpdating:) forControlEvents:UIControlEventEditingChanged];

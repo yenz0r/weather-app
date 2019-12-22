@@ -7,11 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "StartScreenPresenterImpl.h"
+#import "StartScreenPresenter.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@class StartScreenPresenterImpl;
+@class StartScreenPresenter;
 
 @interface StartScreenView : UIViewController <UIPickerViewDelegate, UIPickerViewDataSource>
 
@@ -21,8 +21,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (weak, nonatomic) IBOutlet UIButton *startButtonTapped;
 - (IBAction)startButtonTapped:(id)sender;
 
+@property (strong, nonatomic) StartScreenPresenter* presenter;
 
-@property (strong, nonatomic) StartScreenPresenterImpl *presenter;
 - (void)updateResultLabel: (NSString*)text;
 - (void)showErrorAlert;
 @end

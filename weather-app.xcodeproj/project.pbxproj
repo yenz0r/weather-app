@@ -11,13 +11,14 @@
 		B910AB3123AEBB8B001140ED /* DayWeatherBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = B910AB3023AEBB8B001140ED /* DayWeatherBuilder.m */; };
 		B954045F23AFEBD0005B51B6 /* StartScreenView.m in Sources */ = {isa = PBXBuildFile; fileRef = B9DC194623AEBF510092FEEA /* StartScreenView.m */; };
 		B954046023AFEC18005B51B6 /* StartScreenModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B9DC194323AEBF370092FEEA /* StartScreenModel.m */; };
+		B954046323AFF1EF005B51B6 /* StartScreenBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = B954046223AFF1EF005B51B6 /* StartScreenBuilder.m */; };
 		B99D854123ABF044007B118D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B99D854023ABF044007B118D /* AppDelegate.m */; };
 		B99D854423ABF044007B118D /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B99D854323ABF044007B118D /* SceneDelegate.m */; };
 		B99D854A23ABF044007B118D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B99D854823ABF044007B118D /* Main.storyboard */; };
 		B99D854C23ABF046007B118D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B99D854B23ABF046007B118D /* Assets.xcassets */; };
 		B99D854F23ABF046007B118D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B99D854D23ABF046007B118D /* LaunchScreen.storyboard */; };
 		B99D855223ABF046007B118D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B99D855123ABF046007B118D /* main.m */; };
-		B99D856423ABF538007B118D /* StartScreenPresenterImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = B99D856323ABF538007B118D /* StartScreenPresenterImpl.m */; };
+		B99D856423ABF538007B118D /* StartScreenPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = B99D856323ABF538007B118D /* StartScreenPresenter.m */; };
 		B99D856723ABFB37007B118D /* CitiesProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = B99D856623ABFB37007B118D /* CitiesProvider.m */; };
 		B9A926D123AE55F800E816F8 /* DayWeatherView.m in Sources */ = {isa = PBXBuildFile; fileRef = B9A926D023AE55F800E816F8 /* DayWeatherView.m */; };
 		B9A926D623AE562600E816F8 /* DayWeatherModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B9A926D523AE562600E816F8 /* DayWeatherModel.m */; };
@@ -29,6 +30,8 @@
 		B90466EB23AEAE1C0089D727 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		B910AB2F23AEBB8B001140ED /* DayWeatherBuilder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DayWeatherBuilder.h; sourceTree = "<group>"; };
 		B910AB3023AEBB8B001140ED /* DayWeatherBuilder.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DayWeatherBuilder.m; sourceTree = "<group>"; };
+		B954046123AFF1EF005B51B6 /* StartScreenBuilder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StartScreenBuilder.h; sourceTree = "<group>"; };
+		B954046223AFF1EF005B51B6 /* StartScreenBuilder.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StartScreenBuilder.m; sourceTree = "<group>"; };
 		B99D853C23ABF044007B118D /* weather-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "weather-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B99D853F23ABF044007B118D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		B99D854023ABF044007B118D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -39,7 +42,7 @@
 		B99D854E23ABF046007B118D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B99D855023ABF046007B118D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B99D855123ABF046007B118D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		B99D856323ABF538007B118D /* StartScreenPresenterImpl.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StartScreenPresenterImpl.m; sourceTree = "<group>"; };
+		B99D856323ABF538007B118D /* StartScreenPresenter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StartScreenPresenter.m; sourceTree = "<group>"; };
 		B99D856523ABFB37007B118D /* CitiesProvider.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CitiesProvider.h; sourceTree = "<group>"; };
 		B99D856623ABFB37007B118D /* CitiesProvider.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CitiesProvider.m; sourceTree = "<group>"; };
 		B9A926CF23AE55F800E816F8 /* DayWeatherView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DayWeatherView.h; sourceTree = "<group>"; };
@@ -52,7 +55,7 @@
 		B9DC194323AEBF370092FEEA /* StartScreenModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StartScreenModel.m; sourceTree = "<group>"; };
 		B9DC194523AEBF510092FEEA /* StartScreenView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StartScreenView.h; sourceTree = "<group>"; };
 		B9DC194623AEBF510092FEEA /* StartScreenView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StartScreenView.m; sourceTree = "<group>"; };
-		B9F8231623AD8821003BA1CA /* StartScreenPresenterImpl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StartScreenPresenterImpl.h; sourceTree = "<group>"; };
+		B9F8231623AD8821003BA1CA /* StartScreenPresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StartScreenPresenter.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,10 +81,19 @@
 		B921D68223AD876A0080C2A0 /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
-				B9F8231623AD8821003BA1CA /* StartScreenPresenterImpl.h */,
-				B99D856323ABF538007B118D /* StartScreenPresenterImpl.m */,
+				B9F8231623AD8821003BA1CA /* StartScreenPresenter.h */,
+				B99D856323ABF538007B118D /* StartScreenPresenter.m */,
 			);
 			path = Presenter;
+			sourceTree = "<group>";
+		};
+		B954046423AFF1F5005B51B6 /* Builder */ = {
+			isa = PBXGroup;
+			children = (
+				B954046123AFF1EF005B51B6 /* StartScreenBuilder.h */,
+				B954046223AFF1EF005B51B6 /* StartScreenBuilder.m */,
+			);
+			path = Builder;
 			sourceTree = "<group>";
 		};
 		B99D853323ABF044007B118D = {
@@ -127,6 +139,7 @@
 				B9DC194123AEBF370092FEEA /* Model */,
 				B9DC194423AEBF510092FEEA /* View */,
 				B921D68223AD876A0080C2A0 /* Presenter */,
+				B954046423AFF1F5005B51B6 /* Builder */,
 			);
 			path = StartScreen;
 			sourceTree = "<group>";
@@ -267,7 +280,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B954046023AFEC18005B51B6 /* StartScreenModel.m in Sources */,
-				B99D856423ABF538007B118D /* StartScreenPresenterImpl.m in Sources */,
+				B99D856423ABF538007B118D /* StartScreenPresenter.m in Sources */,
 				B9A926DA23AE563D00E816F8 /* DayWeatherPresenter.m in Sources */,
 				B99D854123ABF044007B118D /* AppDelegate.m in Sources */,
 				B90466EC23AEAE1C0089D727 /* ViewController.m in Sources */,
@@ -277,6 +290,7 @@
 				B99D854423ABF044007B118D /* SceneDelegate.m in Sources */,
 				B99D856723ABFB37007B118D /* CitiesProvider.m in Sources */,
 				B9A926D623AE562600E816F8 /* DayWeatherModel.m in Sources */,
+				B954046323AFF1EF005B51B6 /* StartScreenBuilder.m in Sources */,
 				B910AB3123AEBB8B001140ED /* DayWeatherBuilder.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

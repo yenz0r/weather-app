@@ -6,18 +6,18 @@
 //  Copyright © 2019 yenz0redd. All rights reserved.
 //
 
-#import "StartScreenPresenterImpl.h"
+#import "StartScreenPresenter.h"
 #import "StartScreenModel.h"
 #import "DayWeatherView.h"
 #import "DayWeatherBuilder.h"
 
-@interface StartScreenPresenterImpl ()
+@interface StartScreenPresenter ()
 
 - (BOOL)isCorrectCity;
 
 @end
 
-@implementation StartScreenPresenterImpl
+@implementation StartScreenPresenter
 
 - (id)initWithModel:(StartScreenModel*) model forView:(nonnull StartScreenView *)view {
     self.model = model;
