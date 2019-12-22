@@ -15,11 +15,14 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface StartScreenView : UIViewController <UIPickerViewDelegate, UIPickerViewDataSource>
 
-@property (strong, nonatomic) StartScreenPresenterImpl *presenter;
-@property (weak, nonatomic) IBOutlet UITextField *cityNameTextFiled;
+@property (weak, nonatomic) IBOutlet UITextField *cityNameTextField;
 @property (weak, nonatomic) IBOutlet UIPickerView *cityNamePickerView;
 @property (weak, nonatomic) IBOutlet UILabel *yourCityLabel;
+@property (weak, nonatomic) IBOutlet UIButton *startButtonTapped;
 - (IBAction)startButtonTapped:(id)sender;
+
+
+@property (strong, nonatomic) StartScreenPresenterImpl *presenter;
 - (void)updateResultLabel: (NSString*)text;
 - (void)showErrorAlert;
 @end

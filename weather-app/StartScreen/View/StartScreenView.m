@@ -10,6 +10,7 @@
 
 @interface StartScreenView ()
 
+
 @end
 
 @implementation StartScreenView
@@ -24,10 +25,11 @@
 
     [self.cityNamePickerView setDelegate:self];
 
-    [self.cityNameTextFiled addTarget:self action:@selector(handleTextUpdating:) forControlEvents:UIControlEventEditingChanged];
+    [self.cityNameTextField addTarget:self action:@selector(handleTextUpdating:) forControlEvents:UIControlEventEditingChanged];
 
     [self.presenter viewDidLoad];
     [self.cityNamePickerView reloadAllComponents];
+    self.navigationItem.title = @"Choose city";
 }
 
 - (void)handleTextUpdating:(UITextField*)sender {
@@ -37,10 +39,6 @@
 - (void)updateResultLabel:(NSString *)text {
     NSString* resultText = [NSString stringWithFormat:@"%@%@", @"Your city: ", text];
     [self.yourCityLabel setText:resultText];
-}
-
-- (IBAction)startButtonTapped:(id)sender {
-    [self.presenter handleStartButtonTap];
 }
 
 - (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView {
@@ -69,6 +67,10 @@
 
     [alert addAction:defaultAction];
     [self presentViewController:alert animated:YES completion:nil];
+}
+
+- (IBAction)startButtonTapped:(id)sender {
+    [self.presenter handleStartButtonTap];
 }
 
 @end

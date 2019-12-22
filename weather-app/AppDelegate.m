@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "StartScreenView.h"
+#import "ViewController.h"
 
 @interface AppDelegate ()
 
@@ -17,12 +18,6 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-    StartScreenView *startScreenView = [storyboard instantiateViewControllerWithIdentifier:@"StartScreenView"];
-    
-    self.window.rootViewController = startScreenView;
-    [self.window makeKeyAndVisible];
     return YES;
 }
 

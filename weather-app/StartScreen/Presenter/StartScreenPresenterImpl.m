@@ -8,6 +8,8 @@
 
 #import "StartScreenPresenterImpl.h"
 #import "StartScreenModel.h"
+#import "DayWeatherView.h"
+#import "DayWeatherBuilder.h"
 
 @interface StartScreenPresenterImpl ()
 
@@ -26,7 +28,16 @@
 
 - (void)handleStartButtonTap {
     if (self.isCorrectCity) {
-        printf("start");
+        UITabBarController* tabController = [[UITabBarController alloc] init];
+
+        NSMutableArray<UIViewController*> *viewControllers = [[NSMutableArray alloc] init];
+
+        DayWeatherView* dayWeatherView = [[[DayWeatherBuilder alloc] init] build:self.selectedCity];
+
+        [viewControllers addObject:dayWeatherView];
+        [tabController setViewControllers:viewControllers];
+
+        [self.view.navigationController pushViewController:tabController animated:true];
     } else {
         [self.view showErrorAlert];
     }
