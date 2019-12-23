@@ -22,7 +22,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.navigationItem.title = @"Day weather";
 
     [self.presenter viewDidLoad];
 }

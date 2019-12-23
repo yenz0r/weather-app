@@ -10,6 +10,8 @@
 #import "StartScreenModel.h"
 #import "DayWeatherView.h"
 #import "DayWeatherBuilder.h"
+#import "MonthWeatherView.h"
+#import "MonthWeatherBuilder.h"
 
 @interface StartScreenPresenter ()
 
@@ -33,11 +35,20 @@
         NSMutableArray<UIViewController*> *viewControllers = [[NSMutableArray alloc] init];
 
         DayWeatherView* dayWeatherView = [[[DayWeatherBuilder alloc] init] build:self.selectedCity];
+        MonthWeatherView* monthWeatherView = [[[MonthWeatherBuilder alloc] init] buildWithCity:self.selectedCity];
 
         [viewControllers addObject:dayWeatherView];
+        [viewControllers addObject:monthWeatherView];
+        
         [tabController setViewControllers:viewControllers];
 
+        dayWeatherView.tabBarItem.title = @"Day";
+        monthWeatherView.tabBarItem.title = @"Month";
+
         [self.view.navigationController pushViewController:tabController animated:true];
+
+        tabController.navigationItem.title = @"Weather info";
+
     } else {
         [self.view showErrorAlert];
     }

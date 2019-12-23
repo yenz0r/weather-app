@@ -12,6 +12,10 @@
 		B954045F23AFEBD0005B51B6 /* StartScreenView.m in Sources */ = {isa = PBXBuildFile; fileRef = B9DC194623AEBF510092FEEA /* StartScreenView.m */; };
 		B954046023AFEC18005B51B6 /* StartScreenModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B9DC194323AEBF370092FEEA /* StartScreenModel.m */; };
 		B954046323AFF1EF005B51B6 /* StartScreenBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = B954046223AFF1EF005B51B6 /* StartScreenBuilder.m */; };
+		B954046723B049CF005B51B6 /* MonthWeatherView.m in Sources */ = {isa = PBXBuildFile; fileRef = B954046623B049CF005B51B6 /* MonthWeatherView.m */; };
+		B954046C23B04A03005B51B6 /* MonthWeatherModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B954046B23B04A03005B51B6 /* MonthWeatherModel.m */; };
+		B954047023B04A16005B51B6 /* MonthWeatherPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = B954046F23B04A16005B51B6 /* MonthWeatherPresenter.m */; };
+		B954047423B04A2A005B51B6 /* MonthWeatherBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = B954047323B04A2A005B51B6 /* MonthWeatherBuilder.m */; };
 		B99D854123ABF044007B118D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B99D854023ABF044007B118D /* AppDelegate.m */; };
 		B99D854423ABF044007B118D /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B99D854323ABF044007B118D /* SceneDelegate.m */; };
 		B99D854A23ABF044007B118D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B99D854823ABF044007B118D /* Main.storyboard */; };
@@ -32,6 +36,14 @@
 		B910AB3023AEBB8B001140ED /* DayWeatherBuilder.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DayWeatherBuilder.m; sourceTree = "<group>"; };
 		B954046123AFF1EF005B51B6 /* StartScreenBuilder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StartScreenBuilder.h; sourceTree = "<group>"; };
 		B954046223AFF1EF005B51B6 /* StartScreenBuilder.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StartScreenBuilder.m; sourceTree = "<group>"; };
+		B954046523B049CF005B51B6 /* MonthWeatherView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MonthWeatherView.h; sourceTree = "<group>"; };
+		B954046623B049CF005B51B6 /* MonthWeatherView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MonthWeatherView.m; sourceTree = "<group>"; };
+		B954046A23B04A03005B51B6 /* MonthWeatherModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MonthWeatherModel.h; sourceTree = "<group>"; };
+		B954046B23B04A03005B51B6 /* MonthWeatherModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MonthWeatherModel.m; sourceTree = "<group>"; };
+		B954046E23B04A16005B51B6 /* MonthWeatherPresenter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MonthWeatherPresenter.h; sourceTree = "<group>"; };
+		B954046F23B04A16005B51B6 /* MonthWeatherPresenter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MonthWeatherPresenter.m; sourceTree = "<group>"; };
+		B954047223B04A2A005B51B6 /* MonthWeatherBuilder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MonthWeatherBuilder.h; sourceTree = "<group>"; };
+		B954047323B04A2A005B51B6 /* MonthWeatherBuilder.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MonthWeatherBuilder.m; sourceTree = "<group>"; };
 		B99D853C23ABF044007B118D /* weather-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "weather-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B99D853F23ABF044007B118D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		B99D854023ABF044007B118D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -96,6 +108,53 @@
 			path = Builder;
 			sourceTree = "<group>";
 		};
+		B954046823B049D4005B51B6 /* MonthWeatherScreen */ = {
+			isa = PBXGroup;
+			children = (
+				B954046923B049EC005B51B6 /* View */,
+				B954046D23B04A07005B51B6 /* Model */,
+				B954047123B04A1C005B51B6 /* Presenter */,
+				B954047523B04A2F005B51B6 /* Builder */,
+			);
+			path = MonthWeatherScreen;
+			sourceTree = "<group>";
+		};
+		B954046923B049EC005B51B6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B954046523B049CF005B51B6 /* MonthWeatherView.h */,
+				B954046623B049CF005B51B6 /* MonthWeatherView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B954046D23B04A07005B51B6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B954046A23B04A03005B51B6 /* MonthWeatherModel.h */,
+				B954046B23B04A03005B51B6 /* MonthWeatherModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B954047123B04A1C005B51B6 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				B954046E23B04A16005B51B6 /* MonthWeatherPresenter.h */,
+				B954046F23B04A16005B51B6 /* MonthWeatherPresenter.m */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		B954047523B04A2F005B51B6 /* Builder */ = {
+			isa = PBXGroup;
+			children = (
+				B954047223B04A2A005B51B6 /* MonthWeatherBuilder.h */,
+				B954047323B04A2A005B51B6 /* MonthWeatherBuilder.m */,
+			);
+			path = Builder;
+			sourceTree = "<group>";
+		};
 		B99D853323ABF044007B118D = {
 			isa = PBXGroup;
 			children = (
@@ -121,6 +180,7 @@
 				B99D854323ABF044007B118D /* SceneDelegate.m */,
 				B99D855B23ABF314007B118D /* StartScreen */,
 				B9A926D223AE560400E816F8 /* DayWeatherScreen */,
+				B954046823B049D4005B51B6 /* MonthWeatherScreen */,
 				B99D856823ABFB3C007B118D /* Utils */,
 				B99D854823ABF044007B118D /* Main.storyboard */,
 				B99D854B23ABF046007B118D /* Assets.xcassets */,
@@ -279,6 +339,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B954047023B04A16005B51B6 /* MonthWeatherPresenter.m in Sources */,
 				B954046023AFEC18005B51B6 /* StartScreenModel.m in Sources */,
 				B99D856423ABF538007B118D /* StartScreenPresenter.m in Sources */,
 				B9A926DA23AE563D00E816F8 /* DayWeatherPresenter.m in Sources */,
@@ -287,8 +348,11 @@
 				B9A926D123AE55F800E816F8 /* DayWeatherView.m in Sources */,
 				B954045F23AFEBD0005B51B6 /* StartScreenView.m in Sources */,
 				B99D855223ABF046007B118D /* main.m in Sources */,
+				B954046C23B04A03005B51B6 /* MonthWeatherModel.m in Sources */,
 				B99D854423ABF044007B118D /* SceneDelegate.m in Sources */,
 				B99D856723ABFB37007B118D /* CitiesProvider.m in Sources */,
+				B954047423B04A2A005B51B6 /* MonthWeatherBuilder.m in Sources */,
+				B954046723B049CF005B51B6 /* MonthWeatherView.m in Sources */,
 				B9A926D623AE562600E816F8 /* DayWeatherModel.m in Sources */,
 				B954046323AFF1EF005B51B6 /* StartScreenBuilder.m in Sources */,
 				B910AB3123AEBB8B001140ED /* DayWeatherBuilder.m in Sources */,
