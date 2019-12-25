@@ -7,6 +7,7 @@
 //
 
 #import "MonthWeatherModel.h"
+#import "WeatherProvider.h"
 
 @implementation MonthWeatherModel
 
@@ -16,6 +17,12 @@
         self.selectedCity = selectedCity;
     }
     return self;
+}
+
+- (void)getWeatherWithCompletion:(completionBlock)completion {
+    [WeatherProvider.shared getMonthWeatherInfoForCity:self.selectedCity withCompletion:^(BOOL status, NSMutableArray<DayWeatherInfo *> * _Nonnull infoArr) {
+        completion(true, infoArr);
+    }];
 }
 
 @end

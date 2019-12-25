@@ -7,6 +7,7 @@
 //
 
 #import "DayWeatherModel.h"
+#import "WeatherProvider.h"
 
 @interface DayWeatherModel ()
 
@@ -20,6 +21,12 @@
         self.selectedCity = city;
     }
     return self;
+}
+
+- (void)getWeatherWithCompletion:(completionBlock)completion {
+    [WeatherProvider.shared getDayWeatherForCity:self.selectedCity withCompletion:^(BOOL status, DayWeatherInfo * _Nonnull info) {
+        completion(status, info);
+    }];
 }
 
 @end

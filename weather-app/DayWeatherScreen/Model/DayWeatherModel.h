@@ -7,13 +7,17 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "DayWeatherInfo.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface DayWeatherModel : NSObject
 
+typedef void(^completionBlock)(BOOL status, DayWeatherInfo* info);
+
 - (id)initWithCity:(NSString*)city;
 @property (strong, nonatomic) NSString* selectedCity;
+- (void)getWeatherWithCompletion:(completionBlock)completion;
 
 @end
 
