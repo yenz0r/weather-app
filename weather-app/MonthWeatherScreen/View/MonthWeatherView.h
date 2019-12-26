@@ -17,6 +17,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (strong, nonatomic) MonthWeatherPresenter* presenter;
 
+- (void)showLoadingAlert;
+- (void)hideLoadingAlert;
+
 @end
 
 NS_ASSUME_NONNULL_END

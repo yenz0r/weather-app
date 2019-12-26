@@ -19,6 +19,8 @@
 		B954047023B04A16005B51B6 /* MonthWeatherPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = B954046F23B04A16005B51B6 /* MonthWeatherPresenter.m */; };
 		B954047423B04A2A005B51B6 /* MonthWeatherBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = B954047323B04A2A005B51B6 /* MonthWeatherBuilder.m */; };
 		B99C962F23B3ADB400E7D433 /* DayWeatherInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = B99C962E23B3ADB400E7D433 /* DayWeatherInfo.m */; };
+		B99C963623B534C500E7D433 /* MonthTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B99C963423B534C500E7D433 /* MonthTableViewCell.m */; };
+		B99C963723B534C500E7D433 /* MonthTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B99C963523B534C500E7D433 /* MonthTableViewCell.xib */; };
 		B99D854123ABF044007B118D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B99D854023ABF044007B118D /* AppDelegate.m */; };
 		B99D854423ABF044007B118D /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B99D854323ABF044007B118D /* SceneDelegate.m */; };
 		B99D854A23ABF044007B118D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B99D854823ABF044007B118D /* Main.storyboard */; };
@@ -53,6 +55,9 @@
 		B954047323B04A2A005B51B6 /* MonthWeatherBuilder.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MonthWeatherBuilder.m; sourceTree = "<group>"; };
 		B99C962D23B3ADB400E7D433 /* DayWeatherInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DayWeatherInfo.h; sourceTree = "<group>"; };
 		B99C962E23B3ADB400E7D433 /* DayWeatherInfo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DayWeatherInfo.m; sourceTree = "<group>"; };
+		B99C963323B534C500E7D433 /* MonthTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MonthTableViewCell.h; sourceTree = "<group>"; };
+		B99C963423B534C500E7D433 /* MonthTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MonthTableViewCell.m; sourceTree = "<group>"; };
+		B99C963523B534C500E7D433 /* MonthTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MonthTableViewCell.xib; sourceTree = "<group>"; };
 		B99D853C23ABF044007B118D /* weather-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "weather-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B99D853F23ABF044007B118D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		B99D854023ABF044007B118D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -162,6 +167,7 @@
 			children = (
 				B954046523B049CF005B51B6 /* MonthWeatherView.h */,
 				B954046623B049CF005B51B6 /* MonthWeatherView.m */,
+				B99C963823B534CB00E7D433 /* MonthTableViewCell */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -191,6 +197,16 @@
 				B954047323B04A2A005B51B6 /* MonthWeatherBuilder.m */,
 			);
 			path = Builder;
+			sourceTree = "<group>";
+		};
+		B99C963823B534CB00E7D433 /* MonthTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				B99C963323B534C500E7D433 /* MonthTableViewCell.h */,
+				B99C963423B534C500E7D433 /* MonthTableViewCell.m */,
+				B99C963523B534C500E7D433 /* MonthTableViewCell.xib */,
+			);
+			path = MonthTableViewCell;
 			sourceTree = "<group>";
 		};
 		B99D853323ABF044007B118D = {
@@ -365,6 +381,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B99C963723B534C500E7D433 /* MonthTableViewCell.xib in Resources */,
 				B99D854F23ABF046007B118D /* LaunchScreen.storyboard in Resources */,
 				B99D854C23ABF046007B118D /* Assets.xcassets in Resources */,
 				B99D854A23ABF044007B118D /* Main.storyboard in Resources */,
@@ -395,6 +412,7 @@
 				B954047423B04A2A005B51B6 /* MonthWeatherBuilder.m in Sources */,
 				B954046723B049CF005B51B6 /* MonthWeatherView.m in Sources */,
 				B9A926D623AE562600E816F8 /* DayWeatherModel.m in Sources */,
+				B99C963623B534C500E7D433 /* MonthTableViewCell.m in Sources */,
 				B954046323AFF1EF005B51B6 /* StartScreenBuilder.m in Sources */,
 				B951ED2D23B0B45100F35756 /* NetworkManager.m in Sources */,
 				B910AB3123AEBB8B001140ED /* DayWeatherBuilder.m in Sources */,

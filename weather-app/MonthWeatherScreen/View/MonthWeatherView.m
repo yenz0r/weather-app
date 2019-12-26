@@ -20,4 +20,16 @@
     [super viewDidLoad];
 }
 
+- (void)showLoadingAlert {
+    UIAlertController* alert = [UIAlertController alertControllerWithTitle:@"Loading"
+                                                                   message:@"Wait a bit please.."
+                                                            preferredStyle:UIAlertControllerStyleAlert];
+
+    [self presentViewController:alert animated:YES completion:nil];
+}
+
+- (void)hideLoadingAlert {
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
 @end

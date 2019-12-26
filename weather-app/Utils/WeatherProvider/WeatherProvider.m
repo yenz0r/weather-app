@@ -62,15 +62,16 @@
 }
 
 - (void)getMonthWeatherInfoForCity:(NSString *)city withCompletion:(nonnull monthCompletionBlock)completion {
-    NSMutableArray<DayWeatherInfo*>* resultArray = [[NSMutableArray alloc] init];
-    DayWeatherInfo* info = [[DayWeatherInfo alloc] initWithDate:nil
-        withTemp:0
-     withMinTemp:0
-     withMaxTemp:0
-    withHudimity:0];
-    [resultArray addObject:info];
+    NSString* path = [NSString stringWithFormat:@"%@%@%@",
+                      self.monthWeatherURL,
+                      city,
+                      self.appidPath];
 
-    completion(true, resultArray);
+    [NetworkManager.shared getRequestForUrl:path
+                                    forType:day
+                             withCompletion:^(BOOL status, NSData * _Nonnull requestData) {
+        // TODO: implement after uploding this opportunity on OpenWeatherAPI
+    }];
 }
 
 @end

@@ -26,4 +26,7 @@
     return self;
 }
 
+- (void)viewDidAppear {
+}
+
 @end

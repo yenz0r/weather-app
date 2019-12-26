@@ -17,6 +17,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface MonthWeatherPresenter : NSObject
 
 - (id)initWithModel:(MonthWeatherModel*)model forView:(MonthWeatherView*)view;
+- (void)viewDidAppear;
 
 @end
 
