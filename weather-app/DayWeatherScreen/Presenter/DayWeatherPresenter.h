@@ -17,7 +17,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface DayWeatherPresenter : NSObject
 
 - (id)initWithModel:(DayWeatherModel*)model forView:(DayWeatherView*)view;
-- (void)viewDidLoad;
+- (void)viewDidAppear;
 
 @end
 

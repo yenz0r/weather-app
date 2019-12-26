@@ -30,8 +30,7 @@
 }
 
 - (void)updateResultLabel:(NSString *)text {
-    NSString* resultText = [NSString stringWithFormat:@"%@%@", @"Your city: ", text];
-    [self.yourCityLabel setText:resultText];
+    [self.yourCityLabel setText:text];
 }
 
 - (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView {

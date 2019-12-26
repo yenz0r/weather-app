@@ -11,6 +11,10 @@
 
 @interface WeatherProvider ()
 
+@property (strong, nonatomic) NSString* dayWeatherPath;
+@property (strong, nonatomic) NSString* monthWeatherURL;
+@property (strong, nonatomic) NSString* appidPath;
+
 @end
 
 @implementation WeatherProvider
@@ -18,6 +22,11 @@
 - (instancetype)init
 {
     self = [super init];
+    if (self) {
+        self.dayWeatherPath = @"http://api.openweathermap.org/data/2.5/weather?q=";
+        self.monthWeatherURL = @"pro.openweathermap.org/data/2.5/climate/month?q=";
+        self.appidPath = @"&appid=3fb48b5fd9d087b6aef720e8522628b1";
+    }
     return self;
 }
 
@@ -31,11 +40,25 @@
 }
 
 - (void)getDayWeatherForCity:(NSString *)city withCompletion:(nonnull dayCompletionBlock)completion {
-    completion(true, [[DayWeatherInfo alloc] initWithDate:nil
-                                       withTemp:0
-                                    withMinTemp:0
-                                    withMaxTemp:0
-                                   withHudimity:0]);
+    NSString* path = [NSString stringWithFormat:@"%@%@%@",
+                      self.dayWeatherPath,
+                      city,
+                      self.appidPath];
+    [NetworkManager.shared getRequestForUrl:path
+                                    forType:day
+                             withCompletion:^(BOOL status, NSData * _Nonnull requestData) {
+        NSError* err;
+        NSDictionary* weatherDict = [NSJSONSerialization JSONObjectWithData:requestData options:NSJSONReadingAllowFragments error:&err];
+
+        NSDate* weatherDate = [NSDate dateWithTimeIntervalSince1970:[weatherDict[@"dt"] doubleValue]];
+        NSDictionary* mainWeather = weatherDict[@"main"];
+
+        completion(status, [[DayWeatherInfo alloc] initWithDate:weatherDate
+                                           withTemp:mainWeather[@"temp"]
+                                        withMinTemp:mainWeather[@"temp_min"]
+                                        withMaxTemp:mainWeather[@"temp_max"]
+                                       withHudimity:mainWeather[@"humidity"]]);
+    }];
 }
 
 - (void)getMonthWeatherInfoForCity:(NSString *)city withCompletion:(nonnull monthCompletionBlock)completion {

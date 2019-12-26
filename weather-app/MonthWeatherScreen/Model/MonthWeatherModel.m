@@ -19,7 +19,7 @@
     return self;
 }
 
-- (void)getWeatherWithCompletion:(completionBlock)completion {
+- (void)getWeatherWithCompletion:(monthCompletionBlock)completion {
     [WeatherProvider.shared getMonthWeatherInfoForCity:self.selectedCity withCompletion:^(BOOL status, NSMutableArray<DayWeatherInfo *> * _Nonnull infoArr) {
         completion(true, infoArr);
     }];

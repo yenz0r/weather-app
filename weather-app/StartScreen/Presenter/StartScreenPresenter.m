@@ -56,17 +56,20 @@
 
 - (void)viewDidLoad {
     self.citiesNames = self.model.citiesNames;
-    [self.view updateResultLabel:self.selectedCity];
+    NSString* cityText = [NSString stringWithFormat:@"%@%@", @"Your city: ", self.selectedCity];
+    [self.view updateResultLabel:cityText];
 }
 
 - (void)handlePickerSelect:(NSInteger)atRow {
     self.selectedCity = self.citiesNames[atRow];
-    [self.view updateResultLabel:self.selectedCity];
+    NSString* cityText = [NSString stringWithFormat:@"%@%@", @"Your city: ", self.selectedCity];
+    [self.view updateResultLabel:cityText];
 }
 
 - (void)handleTextFieldInput:(NSString*)withText{
     self.selectedCity = withText;
-    [self.view updateResultLabel:self.selectedCity];
+    NSString* cityText = [NSString stringWithFormat:@"%@%@", @"Your city: ", self.selectedCity];
+    [self.view updateResultLabel:cityText];
 }
 
 - (BOOL)isCorrectCity {

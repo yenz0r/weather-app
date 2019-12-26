@@ -23,6 +23,9 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)showMinTempValue:(NSString*)text;
 - (void)showHudimityValue:(NSString*)text;
 
+- (void)showLoadingAlert;
+- (void)hideLoadingAlert;
+
 @end
 
 NS_ASSUME_NONNULL_END

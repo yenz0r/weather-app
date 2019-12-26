@@ -13,11 +13,11 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface MonthWeatherModel : NSObject
 
-typedef void(^completionBlock)(BOOL status, NSMutableArray<DayWeatherInfo*>* infoArr);
+typedef void(^monthCompletionBlock)(BOOL status, NSMutableArray<DayWeatherInfo*>* infoArr);
 
 @property (strong, nonatomic) NSString* selectedCity;
 - (id)initWithCity:(NSString*)selectedCity;
-- (void)getWeatherWithCompletion:(completionBlock)completion;
+- (void)getWeatherWithCompletion:(monthCompletionBlock)completion;
 
 @end
 

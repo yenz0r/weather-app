@@ -28,8 +28,23 @@
     return self;
 }
 
-- (void)viewDidLoad {
+- (void)viewDidAppear {
     [self.view showCityName:self.model.selectedCity];
+    [self.view showLoadingAlert];
+    [self.model getWeatherWithCompletion:^(BOOL status, DayWeatherInfo * _Nonnull info) {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            sleep(1); // for testing
+            [self.view hideLoadingAlert];
+            if (!status) {
+                return;
+            }
+
+            [self.view showTempValue:[info.temp stringValue]];
+            [self.view showMaxTempValue:[info.maxTemp stringValue]];
+            [self.view showMinTempValue:[info.minTemp stringValue]];
+            [self.view showHudimityValue:[info.hudimity stringValue]];
+        });
+    }];
 }
 
 @end

@@ -10,7 +10,11 @@
 
 @implementation DayWeatherInfo
 
-- (id)initWithDate:(NSDate *)date withTemp:(double)temp withMinTemp:(double)minTemp withMaxTemp:(double)maxTemp withHudimity:(double)hudiminty {
+- (id)initWithDate:(NSDate*)date
+          withTemp:(NSNumber*)temp
+       withMinTemp:(NSNumber*)minTemp
+       withMaxTemp:(NSNumber*)maxTemp
+      withHudimity:(NSNumber*)hudiminty {
 
     self = [super init];
     if (self) {

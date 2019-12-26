@@ -34,7 +34,9 @@
     return manager;
 }
 
-- (void)getRequestForUrl:(NSString*)urlString forType:(DownloadType)type withCompletion:(getCompletionBlock)completion; {
+- (void)getRequestForUrl:(NSString*)urlString
+                 forType:(DownloadType)type
+          withCompletion:(getCompletionBlock)completion {
     NSURL* url = [NSURL URLWithString:urlString];
 
     [[NSURLSession.sharedSession dataTaskWithURL:url completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {

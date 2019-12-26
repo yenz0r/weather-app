@@ -20,10 +20,9 @@
 
 @implementation DayWeatherView
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-
-    [self.presenter viewDidLoad];
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    [self.presenter viewDidAppear];
 }
 
 - (void)showCityName:(NSString *)name {
@@ -44,6 +43,18 @@
 
 - (void)showHudimityValue:(NSString *)text {
     self.hudimityLabel.text = text;
+}
+
+- (void)showLoadingAlert {
+    UIAlertController* alert = [UIAlertController alertControllerWithTitle:@"Loading"
+                                                                   message:@"Wait a bit please.."
+                                                            preferredStyle:UIAlertControllerStyleAlert];
+
+    [self presentViewController:alert animated:YES completion:nil];
+}
+
+- (void)hideLoadingAlert {
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 @end

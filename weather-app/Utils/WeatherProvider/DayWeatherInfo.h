@@ -13,16 +13,16 @@ NS_ASSUME_NONNULL_BEGIN
 @interface DayWeatherInfo : NSObject
 
 @property (strong, nonatomic) NSDate* date;
-@property double temp;
-@property double minTemp;
-@property double maxTemp;
-@property double hudimity;
+@property (strong, nonatomic) NSNumber* temp;
+@property (strong, nonatomic) NSNumber* minTemp;
+@property (strong, nonatomic) NSNumber* maxTemp;
+@property (strong, nonatomic) NSNumber* hudimity;
 
 - (id)initWithDate:(NSDate*)date
-    withTemp:(double) temp
-    withMinTemp:(double) minTemp
-    withMaxTemp:(double) maxTemp
-    withHudimity:(double) hudiminty;
+          withTemp:(NSNumber*) temp
+       withMinTemp:(NSNumber*) minTemp
+       withMaxTemp:(NSNumber*) maxTemp
+      withHudimity:(NSNumber*) hudiminty;
 
 @end
 
