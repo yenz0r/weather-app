@@ -23,6 +23,16 @@
     [self.presenter viewDidLoad];
     [self.cityNamePickerView reloadAllComponents];
     self.navigationItem.title = @"Choose city";
+
+    UIBarButtonItem *historyItem = [[UIBarButtonItem alloc] initWithTitle:@"History"
+                                                                   style:UIBarButtonItemStylePlain
+                                                                  target:self
+                                                                  action:@selector(historyItemTapped:)];
+    self.navigationItem.rightBarButtonItem = historyItem;
+}
+
+- (void)historyItemTapped:(id)sender {
+    [self.presenter handleHistoryItemTap];
 }
 
 - (void)handleTextUpdating:(UITextField*)sender {

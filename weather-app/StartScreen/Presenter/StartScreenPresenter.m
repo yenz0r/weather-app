@@ -12,6 +12,8 @@
 #import "DayWeatherBuilder.h"
 #import "MonthWeatherView.h"
 #import "MonthWeatherBuilder.h"
+#import "HistoryView.h"
+#import "HistoryBuilder.h"
 
 @interface StartScreenPresenter ()
 
@@ -74,6 +76,11 @@
 
 - (BOOL)isCorrectCity {
     return ![self.selectedCity isEqual: @"underfined"];
+}
+
+- (void)handleHistoryItemTap {
+    HistoryView* historyView = [[[HistoryBuilder alloc] init] build];;
+    [self.view.navigationController pushViewController:historyView animated:YES];
 }
 
 @end

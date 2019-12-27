@@ -8,7 +8,6 @@
 
 #import "AppDelegate.h"
 #import "StartScreenView.h"
-#import "ViewController.h"
 
 @interface AppDelegate ()
 

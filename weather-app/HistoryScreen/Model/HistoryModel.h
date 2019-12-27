@@ -7,10 +7,16 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "DayWeather.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface HistoryModel : NSObject
+
+@property (strong, nonatomic) NSMutableArray<DayWeather*>* dayWeatherHistory;
+
+- (id)init;
+- (void)clearHistory;
 
 @end
 

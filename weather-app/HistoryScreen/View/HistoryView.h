@@ -2,15 +2,24 @@
 //  HistoryView.h
 //  weather-app
 //
-//  Created by yenz0redd on 26.12.2019.
+//  Created by yenz0redd on 27.12.2019.
 //  Copyright © 2019 yenz0redd. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
+#import "HistoryPresenter.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface HistoryView : UIViewController
+@class HistoryPresenter;
+
+@interface HistoryView : UIViewController <UITableViewDelegate, UITableViewDataSource>
+
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
+
+@property (strong, nonatomic) HistoryPresenter* presenter;
+
+- (void)reloadData;
 
 @end
 

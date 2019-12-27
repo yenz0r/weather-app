@@ -28,6 +28,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)viewDidLoad;
 - (void)handlePickerSelect:(NSInteger)atRow;
 - (void)handleTextFieldInput:(NSString*)withText;
+- (void)handleHistoryItemTap;
 
 @end
 

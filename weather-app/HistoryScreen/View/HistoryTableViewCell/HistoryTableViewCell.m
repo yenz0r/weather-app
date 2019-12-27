@@ -10,15 +10,23 @@
 
 @implementation HistoryTableViewCell
 
-- (void)awakeFromNib {
-    [super awakeFromNib];
-    // Initialization code
+- (void)setupDateWithText:(NSString *)text {
+    self.dateLabel.text = text;
 }
 
-- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
-    [super setSelected:selected animated:animated];
+- (void)setupTempWithText:(NSString *)text {
+    self.tempLabel.text = text;
+}
 
-    // Configure the view for the selected state
+- (void)setupCityNameWithText:(NSString *)text {
+    self.cityNameLabel.text = text;
+}
+
+- (void)awakeFromNib {
+    [super awakeFromNib];
+    self.cityNameLabel.text = @"City";
+    self.tempLabel.text = @"Temperature";
+    self.dateLabel.text = @"Date";
 }
 
 @end

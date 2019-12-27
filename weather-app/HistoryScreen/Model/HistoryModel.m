@@ -7,7 +7,21 @@
 //
 
 #import "HistoryModel.h"
+#import "HistoryProvider.h"
 
 @implementation HistoryModel
+
+- (id)init {
+    self = [super init];
+    if (self) {
+        self.dayWeatherHistory = [HistoryProvider.shared getAllNotes];
+    }
+    return self;
+}
+
+- (void)clearHistory {
+    [HistoryProvider.shared deleteAllHistory];
+    self.dayWeatherHistory = [HistoryProvider.shared getAllNotes];
+}
 
 @end

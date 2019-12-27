@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "A43F9706-E063-429C-87EA-1C0FD13BEC61"
+   type = "0"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "2960B2E0-74DD-47B4-8070-0F84884324B3"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "weather-app/Utils/WeatherProvider/WeatherProvider.m"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "57"
+            endingLineNumber = "57"
+            landmarkName = "-getDayWeatherForCity:withCompletion:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B6DD3903-DD6D-478D-9FA6-643390834FEE"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "weather-app/Utils/HistoryProvider/HistoryProvider.m"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "38"
+            endingLineNumber = "38"
+            landmarkName = "-addHistoryWithDate:forCity:withTemp:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "2A6AAAA2-4CD8-45B9-A2FE-55A965E4972A"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "weather-app/Utils/DatabaseManager/DatabaseManager.m"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "47"
+            endingLineNumber = "47"
+            landmarkName = "-saveDayWeather:"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "2A6AAAA2-4CD8-45B9-A2FE-55A965E4972A - 68859e8f80a6d091"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[DatabaseManager saveDayWeather:]"
+                  moduleName = "weather-app"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/yenz0redd/git/weather-app/weather-app/Utils/DatabaseManager/DatabaseManager.m"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "48"
+                  endingLineNumber = "48"
+                  offsetFromSymbolStart = "39">
+               </Location>
+               <Location
+                  uuid = "2A6AAAA2-4CD8-45B9-A2FE-55A965E4972A - a50fbcb6fb6f75ce"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__34-[DatabaseManager saveDayWeather:]_block_invoke"
+                  moduleName = "weather-app"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/yenz0redd/git/weather-app/weather-app/Utils/DatabaseManager/DatabaseManager.m"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "48"
+                  endingLineNumber = "48"
+                  offsetFromSymbolStart = "12">
+               </Location>
+               <Location
+                  uuid = "2A6AAAA2-4CD8-45B9-A2FE-55A965E4972A - ee0705b9db4492e1"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__destroy_helper_block_e8_32s40s"
+                  moduleName = "weather-app"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/yenz0redd/git/weather-app/weather-app/Utils/DatabaseManager/DatabaseManager.m"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "48"
+                  endingLineNumber = "48"
+                  offsetFromSymbolStart = "16">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
