@@ -18,6 +18,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self.tableView setDataSource:self];
+    self.tableView.tableFooterView = [[UIView alloc] init];
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+
     [self.tableView registerNib:[UINib nibWithNibName:@"HistoryTableViewCell" bundle:nil] forCellReuseIdentifier:@"historyCell"];
 
     self.navigationItem.title = @"History";
@@ -46,6 +49,7 @@
     [cell setupDateWithText:[self.presenter dateForCellAtIndex:indexPath.row]];
     [cell setupTempWithText:[self.presenter tempForCellAtIndex:indexPath.row]];
     [cell setupCityNameWithText:[self.presenter cityForCellAtIndex:indexPath.row]];
+
     return cell;
 }
 

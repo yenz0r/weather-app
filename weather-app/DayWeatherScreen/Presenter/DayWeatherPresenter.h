@@ -19,6 +19,8 @@ NS_ASSUME_NONNULL_BEGIN
 - (id)initWithModel:(DayWeatherModel*)model forView:(DayWeatherView*)view;
 - (void)viewDidAppear;
 
+- (void)handleCloseAlertAction;
+
 @end
 
 NS_ASSUME_NONNULL_END

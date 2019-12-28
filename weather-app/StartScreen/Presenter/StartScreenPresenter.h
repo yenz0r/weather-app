@@ -24,8 +24,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (id)initWithModel:(StartScreenModel*)model forView:(StartScreenView*)view;
 
-- (void)handleStartButtonTap;
 - (void)viewDidLoad;
+- (void)viewWillAppear;
+
+- (void)handleStartButtonTap;
 - (void)handlePickerSelect:(NSInteger)atRow;
 - (void)handleTextFieldInput:(NSString*)withText;
 - (void)handleHistoryItemTap;

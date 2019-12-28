@@ -83,4 +83,8 @@
     [self.view.navigationController pushViewController:historyView animated:YES];
 }
 
+- (void)viewWillAppear {
+    [self.view clearInputFields];
+}
+
 @end

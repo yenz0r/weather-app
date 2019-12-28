@@ -24,11 +24,19 @@
     [self.cityNamePickerView reloadAllComponents];
     self.navigationItem.title = @"Choose city";
 
+    self.startButton.layer.cornerRadius = 20;
+    self.startButton.clipsToBounds = TRUE;
+
     UIBarButtonItem *historyItem = [[UIBarButtonItem alloc] initWithTitle:@"History"
-                                                                   style:UIBarButtonItemStylePlain
-                                                                  target:self
-                                                                  action:@selector(historyItemTapped:)];
+                                                                    style:UIBarButtonItemStylePlain
+                                                                   target:self
+                                                                   action:@selector(historyItemTapped:)];
     self.navigationItem.rightBarButtonItem = historyItem;
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [self.presenter viewWillAppear];
 }
 
 - (void)historyItemTapped:(id)sender {
@@ -73,6 +81,11 @@
 
 - (IBAction)startButtonTapped:(id)sender {
     [self.presenter handleStartButtonTap];
+}
+
+- (void)clearInputFields {
+    self.cityNameTextField.text = @"";
+    [self.view endEditing:TRUE];
 }
 
 @end

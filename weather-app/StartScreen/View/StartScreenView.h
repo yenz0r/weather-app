@@ -15,6 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface StartScreenView : UIViewController <UIPickerViewDelegate, UIPickerViewDataSource>
 
+@property (weak, nonatomic) IBOutlet UIButton *startButton;
 @property (weak, nonatomic) IBOutlet UITextField *cityNameTextField;
 @property (weak, nonatomic) IBOutlet UIPickerView *cityNamePickerView;
 @property (weak, nonatomic) IBOutlet UILabel *yourCityLabel;
@@ -25,6 +26,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)updateResultLabel: (NSString*)text;
 - (void)showErrorAlert;
+
+-(void)clearInputFields;
+
 @end
 
 NS_ASSUME_NONNULL_END

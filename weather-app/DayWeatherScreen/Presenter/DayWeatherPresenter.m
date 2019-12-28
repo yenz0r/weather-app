@@ -36,6 +36,9 @@
             sleep(1); // for testing
             [self.view hideLoadingAlert];
             if (!status) {
+                dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 500000000), dispatch_get_main_queue(), ^{
+                    [self.view showErrorAlert];
+                });
                 return;
             }
 
@@ -45,6 +48,10 @@
             [self.view showHudimityValue:[info.hudimity stringValue]];
         });
     }];
+}
+
+- (void)handleCloseAlertAction {
+    [self.view.navigationController popViewControllerAnimated:TRUE];
 }
 
 @end

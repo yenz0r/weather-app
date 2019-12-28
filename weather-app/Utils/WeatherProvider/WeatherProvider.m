@@ -54,10 +54,12 @@
         NSDate* weatherDate = [NSDate dateWithTimeIntervalSince1970:[weatherDict[@"dt"] doubleValue]];
         NSDictionary* mainWeather = weatherDict[@"main"];
 
-        [HistoryProvider.shared addHistoryWithDate:weatherDate
-                                           forCity:city
-                                          withTemp:[mainWeather[@"temp"] stringValue]];
-
+        if (status) {
+            [HistoryProvider.shared addHistoryWithDate:weatherDate
+                                               forCity:city
+                                              withTemp:[mainWeather[@"temp"] stringValue]];
+        }
+        
         completion(status, [[DayWeatherInfo alloc] initWithDate:weatherDate
                                            withTemp:mainWeather[@"temp"]
                                         withMinTemp:mainWeather[@"temp_min"]

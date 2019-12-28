@@ -26,6 +26,8 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)showLoadingAlert;
 - (void)hideLoadingAlert;
 
+- (void)showErrorAlert;
+
 @end
 
 NS_ASSUME_NONNULL_END
